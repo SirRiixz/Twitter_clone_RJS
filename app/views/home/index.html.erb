@@ -1,0 +1,12 @@
+<h1><%= @brand %></h1>
+
+<ul class="tweet-wrapper">
+      <% @tweets.each do |tweet| %>
+        <li class="tweet">
+          <span>
+            <%= tweet.message %>
+          </span>
+            <%= tweet.created_at.getlocal.strftime("%I:%M %p, %d %b. %Y, %Z") %>
+          </li>
+      <% end %>
+</ul>
